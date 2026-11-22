@@ -316,10 +316,15 @@ main.wrap { padding-top: 32px; padding-bottom: 64px; }
   letter-spacing: 0;
   text-transform: none;
 }
-.related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
 .related-card {
   display: flex;
   flex-direction: column;
+  min-width: 0;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -330,21 +335,45 @@ main.wrap { padding-top: 32px; padding-bottom: 64px; }
   transition: box-shadow .18s, border-color .18s;
 }
 .related-card:hover { box-shadow: var(--shadow-hover); border-color: #d1d5db; }
-.related-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.related-card img,
 .related-media-empty {
-  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: 110px;          /* fixed small height — can never render full-size */
+  object-fit: cover;
+}
+.related-media-empty {
   display: flex;
   align-items: center;
   justify-content: center;
   background: #f3f4f6;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 800;
   color: #9ca3af;
 }
-.related-body { padding: 14px 16px 16px; }
-.related-title { display: block; font-size: .95rem; font-weight: 600; line-height: 1.35; }
+.related-body { padding: 12px 14px 14px; min-width: 0; }
+.related-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: .88rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
 .related-card:hover .related-title { color: var(--accent); }
-.related-meta { display: block; margin-top: 6px; font-size: .76rem; color: var(--muted); }
+.related-meta { display: block; margin-top: 6px; font-size: .72rem; color: var(--muted); }
+
+@media (max-width: 960px) {
+  .related-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  /* mobile: compact horizontal mini-cards */
+  .related-grid { grid-template-columns: 1fr; }
+  .related-card { flex-direction: row; align-items: center; gap: 12px; padding: 10px; }
+  .related-card img,
+  .related-media-empty { width: 72px; height: 72px; border-radius: 8px; flex-shrink: 0; }
+  .related-body { padding: 0; flex: 1; }
+}
 
 /* ============ CATEGORY PAGE ============ */
 .archive-header {
