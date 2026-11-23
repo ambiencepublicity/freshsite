@@ -3,6 +3,7 @@ title: "CAS to Rule Tuesday on Disputed AFCON 2025 Final Between Morocco and Sen
 date: 2026-11-23
 slug: "cas-rule-disputed-afcon-2025-final"
 description: "The Court of Arbitration for Sport will announce its final decision on Tuesday, November 24, settling the long-running dispute over the 2025 AFCON final between Senegal and Morocco."
+category: Sports
 featuredImage: https://www.lindaikejisblog.com/photos/shares/352a4850-fce1-11f0-b7e1-afb6d0884c18.png_1795430661.webp
 ---
 
