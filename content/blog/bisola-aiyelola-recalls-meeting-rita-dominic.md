@@ -2,6 +2,7 @@
 title: "Bisola Aiyeola Recalls Meeting Rita Dominic and Asa: ‘I Couldn’t Breathe’"
 date: 2026-11-22
 description: "Bisola Aiyeola recounts her memorable encounters with Rita Dominic and Asa shortly after Big Brother Naija, revealing how their recognition of her left her shocked."
+category: Entertainment
 featuredImage: https://cdn.vanguardngr.com/wp-content/uploads/2026/11/bisola-e1795298375157.jpeg
 ---
 
